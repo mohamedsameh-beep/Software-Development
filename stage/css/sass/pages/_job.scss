@@ -1,0 +1,369 @@
+body.job {
+  .post__wrapper {
+    margin-top: 62px;
+    display: flex;
+    padding: 32px 16px;
+    position: relative;
+    article {
+      margin-right: 16px;
+      max-width: calc(100% - 314px - 16px);
+    }
+    aside {
+      width: 314px;
+      .block {
+        background: #ffffff;
+        margin-bottom: 16px;
+        width: 100%;
+        border: 1px solid #D9DDE4;
+        border-radius: 4px;
+        padding: 16px;
+        h3 {
+          color: #00133A;
+          margin-bottom: 4px;
+          word-break: break-word;
+          font-size: 16px;
+          font-weight: 700;
+          font-style: normal;
+          letter-spacing: -0.4px;
+          line-height: 24px;
+        }
+        .type {
+          color: #4D6182;
+          margin-bottom: 4px;
+          display: block;
+          font-size: 13px;
+          font-weight: 400;
+          font-style: normal;
+          letter-spacing: -0.3px;
+          line-height: 20px;
+        }
+        .location {
+          color: #627798;
+          display: block;
+          margin-bottom: 4px;
+          font-size: 13px;
+          font-weight: 400;
+          font-style: normal;
+          letter-spacing: -0.3px;
+          line-height: 20px;
+        }
+        p {
+          margin-top: 12px;
+          color: #001433;
+          font-size: 14px;
+          font-weight: 400;
+          font-style: normal;
+          letter-spacing: -0.35px;
+          line-height: 22px;
+        }
+        a {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 15px;
+          padding: 0 12px;
+          border: 1px solid transparent;
+          border-radius: 2px;
+          text-decoration: none;
+          text-align: center;
+          user-select: none;
+          cursor: pointer;
+          min-width: 80px;
+          transition: color .2s ease, background-color .2s ease, border-color .2s ease;
+          min-height: 40px;
+          line-height: 32px;
+          color: #0055D9;
+          background-color: #D9E8FF;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .post {
+    position: relative;
+    background: #ffffff;
+    margin-bottom: 16px;
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #D9DDE4;
+    border-radius: 4px;
+    padding: 24px;
+    .img {
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      object-position: center center;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      font-style: normal;
+      letter-spacing: -0.7px;
+      line-height: 40px;
+      color: #001433;
+      margin-bottom: 4px;
+      word-break: break-word;
+    }
+    .tag {
+      display: flex;
+      margin-bottom: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      a {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+        margin-bottom: 4px;
+        span {
+          font-size: 12px;
+          font-weight: 600;
+          display: inline-flex;
+          align-items: center;
+          min-height: 20px;
+          margin-right: 4px;
+          border-radius: 2px;
+          max-width: 196px;
+          white-space: nowrap;
+          overflow: hidden;
+          cursor: default;
+          text-overflow: ellipsis;
+          padding: 2px 4px;
+          background-color: #EBEDF0;
+          color: #001433;
+          cursor: pointer;
+          padding: 0 4px;
+          border-radius: 4px;
+        }
+      }
+    }
+    .location {
+      margin-top: 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 12px;
+      font-weight: 600;
+      font-style: normal;
+      letter-spacing: -0.27px;
+      line-height: 19px;
+      color: #001433;
+      text-decoration: none;
+    }
+    .date {
+      font-size: 12px;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: -0.27px;
+      line-height: 19px;
+      color: #2C9266;
+    }
+    .applications_inf {
+      padding-top: 0;
+      border: none;
+      flex-flow: row;
+      align-items: center;
+      margin-top: 16px;
+      display: flex;
+      color: #4D6182;
+      .no_application {
+        display: flex;
+        align-items: center;
+        margin-right: 4px;
+        strong {
+          font-size: 28px;
+          font-weight: 600;
+          font-style: normal;
+          letter-spacing: -0.7px;
+          line-height: 40px;
+          margin-right: 8px;
+        }
+        div {
+          font-size: 13px;
+          font-weight: 400;
+          font-style: normal;
+          letter-spacing: -0.3px;
+          line-height: 20px;
+          span {
+            display: block;
+          }
+        }
+      }
+      ul {
+        width: 316px;
+        margin: initial;
+        display: flex;
+        justify-content: center;
+        padding: 0 !important;
+        li {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-flow: column;
+          border-right: 1px solid #D9DDE4;
+          strong {
+            font-size: 16px;
+            font-weight: 600;
+            font-style: normal;
+            letter-spacing: -0.4px;
+            line-height: 24px;
+          }
+          span {
+            font-size: 13px;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: -0.3px;
+            line-height: 20px;
+          }
+          &:nth-child(2) {
+            width: 128px;
+            padding: 0 10px;
+          }
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+    .input_btn {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #EBEDF0;
+      display: flex;
+      align-items: center;
+      a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        padding: 0 12px;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        text-decoration: none;
+        text-align: center;
+        user-select: none;
+        cursor: pointer;
+        min-width: 80px;
+        transition: color .2s ease, background-color .2s ease, border-color .2s ease;
+        min-height: 40px;
+        line-height: 32px;
+        color: #ffffff;
+        background-color: #0055D9;
+        width: 200px;
+        margin-right: 12px;
+      }
+    }
+  }
+  .job_details {
+    background: #ffffff;
+    margin-bottom: 16px;
+    width: 100%;
+    border: 1px solid #D9DDE4;
+    border-radius: 4px;
+    padding: 24px 24px 4px;
+    word-break: break-all;
+    h2 {
+      font-size: 16px;
+      font-weight: 700;
+      font-style: normal;
+      letter-spacing: -0.4px;
+      line-height: 24px;
+    }
+    .row_details {
+      flex-flow: row;
+      margin-top: 16px;
+      display: flex;
+      align-items: flex-start;
+      h5 {
+        font-size: 16px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: -0.4px;
+        line-height: 24px;
+        color: #4D6182;
+        width: 142px;
+        min-width: 142px;
+        display: inline-block;
+        margin-right: 8px;
+      }
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: -0.35px;
+        line-height: 22px;
+        display: inline-flex;
+        align-items: flex-start;
+        color: rgb(0, 20, 51);
+        width: fit-content;
+        margin-left: 4px;
+        text-transform: capitalize;
+      }
+    }
+    .skills {
+      background-color: #FAFAFB;
+      border: 1px solid #D9DDE4;
+      border-radius: 4px;
+      padding: 16px 16px 4px;
+      margin-bottom: 20px;
+      h4 {
+        color: #4D6182;
+        margin-bottom: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        font-style: normal;
+        letter-spacing: -0.4px;
+        line-height: 24px;
+      }
+      .skill_tag {
+        display: inline-flex;
+        max-width: 275px;
+        border-radius: 12px;
+        margin: 2px 12px 12px 2px;
+        background-color: rgb(235, 237, 240);
+        color: rgb(0, 20, 51);
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 3px 6px;
+        cursor: default;
+        font-size: 13px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: -0.3px;
+        align-items: center;
+        line-height: 20px;
+      }
+    }
+  }
+  .job_inf {
+    margin-bottom: 16px;
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #D9DDE4;
+    padding: 32px;
+    h2 {
+      color: #001433;
+      margin-bottom: 12px;
+      font-size: 16px;
+      font-weight: 700;
+      font-style: normal;
+      letter-spacing: -0.4px;
+      line-height: 24px;
+    }
+    ul {
+      font-size: 14px;
+      font-weight: 400;
+      font-style: normal;
+      list-style-type: disc;
+      padding-left: 18px;
+      letter-spacing: -0.35px;
+      line-height: 22px;
+      color: #001433;
+      word-break: break-word;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+body.post {
+  .post__wrapper {
+    margin-top: 62px;
+    display: flex;
+    padding: 32px 16px;
+    .block_mange_posts {
+      padding: 16px;
+      margin-bottom: 16px;
+      border: 1px solid rgb(217, 221, 228);
+      border-radius: 2px;
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      h2 {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: baseline;
+        margin: 0px;
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: 600;
+        letter-spacing: -0.55px;
+      }
+      .block_btn {
+        position: relative;
+        width: 100%;
+        display: flex;
+        a {
+          margin-left: auto;
+          display: inline-flex;
+          -webkit-box-pack: center;
+          align-items: center;
+          font-size: 15px;
+          padding: 0px 12px;
+          border: 1px solid transparent;
+          border-radius: 2px;
+          text-decoration: none;
+          text-align: center;
+          user-select: none;
+          cursor: pointer;
+          min-width: 80px;
+          transition: color 0.2s ease 0s, background-color 0.2s ease 0s, border-color 0.2s ease 0s;
+          min-height: 40px;
+          line-height: 32px;
+          color: rgb(255, 255, 255);
+          background-color: rgb(0, 85, 217);
+        }
+      }
+    }
+    .block {
+      height: 700px;
+      margin-bottom: 42px;
+      border-right: 1px solid rgb(217, 221, 228);
+      border-bottom: 1px solid rgb(217, 221, 228);
+      border-left: 1px solid rgb(217, 221, 228);
+      border-image: initial;
+      border-top: none;
+      border-radius: 2px;
+      background: rgb(255, 255, 255);
+      display: flex;
+      align-items: center;
+      flex-flow: column;
+      justify-content: center;
+      a {
+        display: inline-flex;
+        -webkit-box-pack: center;
+        align-items: center;
+        font-size: 15px;
+        padding: 0px 12px;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        text-decoration: none;
+        text-align: center;
+        user-select: none;
+        cursor: pointer;
+        min-width: 80px;
+        transition: color 0.2s ease 0s, background-color 0.2s ease 0s, border-color 0.2s ease 0s;
+        min-height: 40px;
+        line-height: 32px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 85, 217);
+      }
+      img {
+        width: 350px;
+      }
+      p {
+        margin-bottom: 12px;
+        margin-top: 24px;
+        color: rgb(77, 97, 130);
+        font-size: 24px;
+        letter-spacing: -0.6px;
+        line-height: 28px;
+      }
+    }
+  }
+}

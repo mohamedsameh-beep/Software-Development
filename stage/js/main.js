@@ -1,7 +1,7 @@
 $(document).ready(function(){
   "use strict";
   $("body.home .main-header").css("display", "block");
-  $("body.home .navbar-main").addClass("navbar-transparent").removeClass("navbar-fixed-top");
+  $("body.home .main-header").addClass("navbar-transparent").removeClass("navbar-fixed-top");
   $(window).scroll(function () {
     if ($(document).scrollTop() > 10) {
       $("body.home .main-header").addClass("before-appearing").removeClass("navbar-transparent");
@@ -25,49 +25,4 @@ $(document).ready(function(){
   $("body.jobs .block h6.arrow").on("click", function () {
     $(this).toggleClass("active").parent().find(".inputs").slideToggle(500);
   });
-});
-function existingTag(text)
-{
-	var existing = false,
-		text = text.toLowerCase();
-
-	$(".tags").each(function(){
-		if ($(this).text().toLowerCase() == text) 
-		{
-			existing = true;
-			return "";
-		}
-	});
-
-	return existing;
-}
-
-$(function(){
-  $(".tags-new input").focus();
-  
-  $(".tags-new input").keyup(function(){
-
-		var tag = $(this).val().trim(),
-		length = tag.length;
-
-		if((tag.charAt(length - 1) == ',') && (tag != ","))
-		{
-			tag = tag.substring(0, length - 1);
-
-			if(!existingTag(tag))
-			{
-				$('<li class="tags"><span>' + tag + '</span><i class="fa fa-times"></i></i></li>').insertBefore($(".tags-new"));
-				$(this).val("");	
-			}
-			else
-			{
-				$(this).val(tag);
-			}
-		}
-	});
-  
-  $(document).on("click", ".tags i", function(){
-    $(this).parent("li").remove();
-  });
-
 });

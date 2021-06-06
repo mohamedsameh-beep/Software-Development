@@ -1,0 +1,116 @@
+body.new_post {
+  .post__wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 62px auto;
+    padding: 32px 16px;
+    h1 {
+      margin-bottom: 42px;
+      color: #001433;
+      font-weight: bold;
+      line-height: 1.2;
+      text-align: center;
+    }
+  }
+  .job__details {
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(217, 221, 228);
+    border-radius: 2;
+    padding: 32px;
+    margin-bottom: 16px;
+    h2 {
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: -0.4px;
+      margin-top: 0px;
+      margin-bottom: 16px;
+    }
+    hr {
+      margin: 2.5rem 0;
+    }
+    .input {
+      margin-bottom: 22px;
+      textarea {
+        height: 150px !important;
+      }
+      input,
+      textarea {
+        color: #0D2955;
+        background-color: #FAFAFB;
+        border: 1px solid;
+        border-radius: 2px;
+        border-color: #D9DDE4;
+        width: 100%;
+        letter-spacing: -0.47px;
+        line-height: 20px;
+        font-size: 15px;
+        transition: color .2s ease, background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
+        padding: 10px 8px;
+        height: 40px;
+      }
+      label {
+        color: rgb(0, 20, 51);
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: -0.86px;
+      }
+      &.first {
+        max-width: 480px;
+      }
+      &.location {
+        max-width: 300px;
+      }
+      &.inputs {
+        input {
+          width: 120px;
+        }
+      }
+    }
+  }
+  .inputs_btn {
+    display: flex;
+    justify-content: flex-end;
+    .post__now {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      padding: 0px 12px;
+      border: 1px solid transparent;
+      border-radius: 2px;
+      text-decoration: none;
+      text-align: center;
+      user-select: none;
+      cursor: pointer;
+      min-width: 80px;
+      transition: color 0.2s ease 0s, background-color 0.2s ease 0s, border-color 0.2s ease 0s;
+      min-height: 40px;
+      line-height: 32px;
+      color: rgb(255, 255, 255);
+      background-color: rgb(0, 85, 217);
+    }
+    .post__later {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      padding: 0px 12px;
+      border: 1px solid transparent;
+      border-radius: 2px;
+      text-decoration: none;
+      text-align: center;
+      user-select: none;
+      cursor: pointer;
+      min-width: 80px;
+      transition: color 0.2s ease 0s, background-color 0.2s ease 0s, border-color 0.2s ease 0s;
+      min-height: 40px;
+      line-height: 32px;
+      color: rgb(77, 97, 130);
+      background-color: transparent;
+      margin-right: 8px;
+    }
+  }
+}

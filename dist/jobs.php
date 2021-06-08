@@ -3,7 +3,7 @@
   $title="Jobs";
 	$copyright = true;
 	include 'init.php';
-?>;
+?>
 <!--Start header-->
 <div class="header">
   <div class="container">

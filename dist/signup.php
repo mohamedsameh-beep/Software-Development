@@ -4,42 +4,46 @@
   $copyright=false;
 	include 'init.php';
   // Check If User Coming From HTTP Post Request
-	// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  //   $formErrors = array();
-  //   $first_name 	= $_POST['first_name'];
-  //   $last_name 	= $_POST['last_name'];
-  //   $password 		= $_POST['password'];
-  //   $email 		= $_POST['email'];
-  //   if (isset($email)) {
-  //     $filterdEmail = filter_var($email, FILTER_SANITIZE_EMAIL);
-  //     if (filter_var($filterdEmail, FILTER_VALIDATE_EMAIL) != true) {
-  //       $formErrors[] = 'This Email Is Not Valid';
-  //     }
-  //   }
-  //   // Check If There's No Error Proceed The User Add
-  //   if (empty($formErrors)) {
-  //     $statement = $con->prepare("SELECT * FROM job_seeker WHERE email = ?");
-  //     $statement->execute(array($email));
-  //     $count = $statement->rowCount();
-  //     echo $email;
-  //     if ($count == 1) {
-  //       $formErrors[] = 'Sorry This User Is Exists';
-  //     } else {
-  //       // Insert Userinfo In Database
-  //       $stmt = $con->prepare("INSERT INTO 
-  //                   job_seeker(ID, first_name, last_name, password, email)
-  //                 VALUES(2001 ,:zfname, :zlname, :zpass, :zmail)");
-  //       $stmt->execute(array(
-  //         'zfname' => $first_name,
-  //         'zlname' => $last_name,
-  //         'zpass' => $password,
-  //         'zmail' => $email
-  //       ));
-  //       // Echo Success Message
-  //       $succesMsg = 'Congrats You Are Now Registerd User';
-  //     }
-  //   }
-	// }
+	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $formErrors = array();
+    $first_name 	= $_POST['first_name'];
+    $last_name 	= $_POST['last_name'];
+    $password 		= $_POST['password'];
+    $email 		= $_POST['email'];
+    if (isset($email)) {
+      $filterdEmail = filter_var($email, FILTER_SANITIZE_EMAIL);
+      if (filter_var($filterdEmail, FILTER_VALIDATE_EMAIL) != true) {
+        $formErrors[] = 'This Email Is Not Valid';
+      }
+    }
+    // Check If There's No Error Proceed The User Add
+    if (empty($formErrors)) {
+      $statement = $con->prepare("SELECT * FROM job_seeker WHERE email = ?");
+      $statement->execute(array($email));
+      $count = $statement->rowCount();
+      if ($count == 1) {
+        $formErrors[] = 'Sorry This User Is Exists';
+      } else {
+        // Insert Userinfo In Database
+        $stmt = $con->prepare("INSERT INTO 
+                    job_seeker(first_name, last_name, password, email)
+                  VALUES(:zfname, :zlname, :zpass, :zmail)");
+        $stmt->execute(array(
+          'zfname' => $first_name,
+          'zlname' => $last_name,
+          'zpass' => $password,
+          'zmail' => $email
+        ));
+        // Echo Success Message
+        $succesMsg = 'Congrats You Are Now Registerd User';
+        $_SESSION['email'] = $email; // Register Session email
+				$_SESSION['name'] = $first_name .' '. $last_name;
+				$_SESSION['type'] = 'seeker';
+				header('Location: jobs.php'); // Redirect To Dashboard Page
+				exit();
+      }
+    }
+	}
   ?>
 <h1 class="logo">Find the Best Jobs in Egypt</h1>
 <div class="form">
@@ -88,16 +92,18 @@
     <p class="join__now">Already on Recruitment? <a href="login.php">Sign in</a></p>
   </div>
 </div>
-<div class="the-errors text-center">
-  <?php 
-    // if (!empty($formErrors)) {
-    //   foreach ($formErrors as $error) {
-    //     echo '<div class="msg error">' . $error . '</div>';
-    //   }
-    // }
-    // if (isset($succesMsg)) {
-    //   echo '<div class="msg success">' . $succesMsg . '</div>';
-    // }
-  ?>
-</div>
+<?php if (isset($succesMsg) || !empty($formErrors)): ?>
+  <div class="the-errors text-center">
+    <?php 
+      if (!empty($formErrors)) {
+        foreach ($formErrors as $error) {
+          echo '<div class="msg error">' . $error . '</div>';
+        }
+      }
+      if (isset($succesMsg)) {
+        echo '<div class="msg success">' . $succesMsg . '</div>';
+      }
+    ?>
+  </div>
+<?php endif;?>
 <?php include 'includes/footer.php'; ?>
